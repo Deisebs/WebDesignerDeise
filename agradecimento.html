@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agradecimento final</title>
+    <style>
+        body {
+            background-color: #78094f;
+        }
+
+        h1 {
+            color: #faf9f9;
+            text-align: center;
+            font-family: Bradley Hand, cursive
+        }
+    </style>
+</head>
+
+<body><br><br>
+    <h1><img src="https://media.tenor.com/J_MSj7W9Iy0AAAAj/ang-ku-kueh-girl-akkg.gif"></h1>
+
+    <h1> <mark> Obrigada pelo envio de formulário.</mark><br><br>
+        A gratidão é o único tesouro dos humildes. <br>William Shakespeare</h1>
+    <h1><img src="https://media.tenor.com/pX56Gga4QHwAAAAj/thank-you.gif"></h1>
+
+    <p id="dados"></p>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            // Função para decodificar os cookies
+            function decodeCookie(cookie) {
+                return decodeURIComponent(cookie.split('=')[1]);
+            }
+
+            // Obter os cookies gravados
+            var cookies = document.cookie.split(';');
+
+            // Variáveis para armazenar os valores dos cookies
+            var nome = '';
+            var email = '';
+            var msg = '';
+
+            // Alterar sobre os cookies e obter os valores desejados
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                if (cookie.startsWith('nome=')) {
+                    nome = decodeCookie(cookie);
+                } else if (cookie.startsWith('email=')) {
+                    email = decodeCookie(cookie);
+                } else if (cookie.startsWith('msg=')) {
+                    msg = decodeCookie(cookie);
+                }
+            }
+
+            // Exibir os valores no parágrafo
+            var dadosParagrafo = document.getElementById('dados');
+            dadosParagrafo.textContent = 'Nome: ' + nome + ', Email: ' + email + ', Mensagem: ' + msg;
+        });
+
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>
